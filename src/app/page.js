@@ -53,7 +53,7 @@ export default function IntruderDetectionSystem() {
         video: { 
           width: { ideal: 1280 }, 
           height: { ideal: 720 },
-          facingMode: 'user' // Use front camera
+          facingMode: 'user'
         } 
       });
       
@@ -229,9 +229,7 @@ export default function IntruderDetectionSystem() {
                 {!isCameraOpen ? (
                   <button
                     onClick={() => {
-                      // First set camera open to render video element, then open camera
                       setIsCameraOpen(true);
-                      // Use setTimeout to ensure video element is rendered
                       setTimeout(() => {
                         openCamera();
                       }, 100);
